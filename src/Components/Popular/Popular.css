@@ -1,0 +1,36 @@
+.popular {
+    text-align: center;
+}
+
+.popular h1 {
+    font-weight: 700;
+    font-size: 1.9em;
+}
+
+.popular hr {
+    width: 200px;
+    height: 3px;
+    background: #2d2d2d;
+}
+
+.men-women-popular {
+    margin-top: 50px;
+    display: flex;
+    gap:80px;
+    justify-content: center;
+}
+
+.sale {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -150px;
+}
+
+
+.sale img {
+    width: 1600px;
+    height: 1100px;
+}
+

@@ -1,0 +1,12 @@
+.category-products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 80px;
+    
+}
+
+.category-banner {
+    width: 80%;
+    height: 350px;
+    margin-top: 40px;
+}

@@ -7,8 +7,8 @@ import star_icon_dull from "../Images/star_dull_icon.png";
 
 export const ItemDetail = () => {
     const { id } = useParams();
-    const { products } = useContext(AppContext);
-    const [size, setSize] = useState("");
+    const { products, addToCart } = useContext(AppContext);
+    const [size, setSize] = useState("m");
     
     const product = products.find((item) => {
       return item.id === Number(id);
@@ -28,6 +28,12 @@ export const ItemDetail = () => {
         return star_icon_dull;
       }
     }
+
+    let displaySizes;
+    if(product.category === "men's clothing" || product.category === "women's clothing") {
+      displaySizes = true;
+    }
+
     
     return (
         <div className='item-detail'>
@@ -55,15 +61,16 @@ export const ItemDetail = () => {
             </div>
             <h2 className='product-price'>{product.price}$</h2>
             <p className='product-description'>{product.description}</p>
-            <p className="size">Select Size</p>
-            <div className="size-btns">
+            {displaySizes ? <p className="size">Select Size</p> : <></>}
+            {displaySizes ? <div className="size-btns">
               <button onClick={() => {selectSize("s")}} className={size === "s" ? "size-btn-selected" : "size-btn"}>S</button>
               <button onClick={() => {selectSize("m")}} className={size === "m" ? "size-btn-selected" : "size-btn"}>M</button>
               <button onClick={() => {selectSize("l")}} className={size === "l" ? "size-btn-selected" : "size-btn"}>L</button>
               <button onClick={() => {selectSize("xl")}} className={size === "xl" ? "size-btn-selected" : "size-btn"}>XL</button>
               <button onClick={() => {selectSize("xxl")}} className={size === "xxl" ? "size-btn-selected" : "size-btn"}>XXL</button>
             </div>
-            <button className='add-to-cart'>ADD TO CART</button>
+            : <></>}
+            <button className='add-to-cart' onClick={() => addToCart(product.id, size)}>ADD TO CART</button>
           </div>
         </div>
       )

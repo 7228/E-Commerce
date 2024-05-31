@@ -15,18 +15,39 @@ import { Cart } from './Components/Cart/Cart';
 
 function App() {
   const [products, setProducts] = useState("");
+  const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
             .then(res=>res.json())
             .then(data=>setProducts(data))
   },[])
+  
+  
+  const addToCart = (productId, sizeSelect) => {
+    for (let i = 0; i < products.length; i++) {
+      const product = products[i];
+      if(product.id === productId) {
+        setCartItems((oldItems) => {
+          return [
+            ...oldItems, {product, size: sizeSelect}
+          ]
+        })
+      }
+    }
+  }
+
+  const removeFromCart = (productId) => {
+    setCartItems((oldItems) => oldItems.filter((item) => {
+      return item.product.id !== productId;
+    }))
+  }
 
   console.log(products);
 
   return (
     <div className="App">
-      <AppContext.Provider value={{products}}>
+      <AppContext.Provider value={{products, addToCart, removeFromCart,cartItems}}>
         <BrowserRouter>
           <Navbar />
           <Routes>

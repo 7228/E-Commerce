@@ -4,7 +4,7 @@ import { AppContext } from '../../Context/AppContext'
 import remove_icon from "../Images/cart_cross_icon.png";
 
 export const Cart = () => {
-  const { cartItems, removeFromCart } = useContext(AppContext);
+  const { cartItems, removeFromCart, getTotalAmount } = useContext(AppContext);
   console.log("cart:", cartItems);
   
   return (
@@ -31,6 +31,24 @@ export const Cart = () => {
           </div>
         ) 
       }) : <></>}
+      <div className="order">
+        <p className='summary'>Order Summary</p>
+          <div className="order-details">
+            <p>Subtotal</p>
+            <p>{getTotalAmount()}$</p>
+          </div>
+          <hr />
+          <div className='order-details'>
+            <p>Estimated Shipping</p>
+            <p>0$</p>
+          </div>
+          <hr />
+          <div className="order-details total">
+            <p>Total</p>
+            <p>{getTotalAmount()}$</p>
+          </div>
+        </div>
+        <button className="checkout">Proceed To Checkout</button>
     </div>
   )
 }

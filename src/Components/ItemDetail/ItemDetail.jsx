@@ -70,7 +70,7 @@ export const ItemDetail = () => {
               <button onClick={() => {selectSize("xxl")}} className={size === "xxl" ? "size-btn-selected" : "size-btn"}>XXL</button>
             </div>
             : <></>}
-            <button className='add-to-cart' onClick={() => addToCart(product.id, size)}>ADD TO CART</button>
+            <button className='add-to-cart' onClick={() => addToCart(product.id, displaySizes ? size : "")}>ADD TO CART</button>
           </div>
         </div>
       )

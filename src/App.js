@@ -35,6 +35,7 @@ function App() {
         })
       }
     }
+    window.scrollTo(0,0);
   }
 
   const removeFromCart = (productId) => {
@@ -43,11 +44,19 @@ function App() {
     }))
   }
 
+  const getTotalAmount = () => {
+    let amount=0;
+    cartItems.map((item) => {
+      amount += item.product.price
+    })
+    return amount;
+  }
+
   console.log(products);
 
   return (
     <div className="App">
-      <AppContext.Provider value={{products, addToCart, removeFromCart,cartItems}}>
+      <AppContext.Provider value={{products, addToCart, removeFromCart, getTotalAmount, cartItems}}>
         <BrowserRouter>
           <Navbar />
           <Routes>

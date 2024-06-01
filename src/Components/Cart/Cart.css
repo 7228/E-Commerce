@@ -46,3 +46,40 @@
     margin-left: 110px;
     cursor: pointer;
 }
+
+.order {
+    margin-top: 100px;
+    width: 40%;
+}
+
+.summary {
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: -430px;
+}
+
+.order-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-details p {
+    font-size: 20px;
+    color: #454545;
+}
+
+.total p {
+    font-weight: 800;
+}
+
+.checkout {
+    margin-top: 50px;
+    width: 190px;
+    height: 55px;
+    border-radius: 10px;
+    background: rgb(218, 23, 23);
+    color: white;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+}

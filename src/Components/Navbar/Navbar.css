@@ -26,6 +26,7 @@ hr {
 
 .navbar-link {
     text-decoration: none;
+    display: flex;
 }
 
 .shop-logo {
@@ -39,6 +40,18 @@ hr {
 }
 
 .shopping-cart {
-    width: 60px;
-    height: 55px;
+    width: 50px;
+    height: 45px;
+}
+
+.cart-container {
+    display: flex;
+}
+
+.cart-amount {
+    background: red;
+    margin-left: -12px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
 }

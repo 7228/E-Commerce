@@ -9,7 +9,7 @@ import shopping_cart from "../Images/shopping_cart.png"
 export const Navbar = () => {
   const [currentTab, setCurrentTab] = useState("home");
   
-  const {products} = useContext(AppContext);
+  const {products, cartItems} = useContext(AppContext);
   
 
   const changeTab = (id) => {
@@ -51,8 +51,9 @@ export const Navbar = () => {
           </li>
         </Link>
         <Link to="/cart" className='navbar-link' id='cart'>
-          <li>
+          <li className='cart-container'>
             <img src={shopping_cart} alt="" className='shopping-cart'/>
+            <div className="cart-amount">{cartItems.length}</div>
           </li>
         </Link>
       </ul>

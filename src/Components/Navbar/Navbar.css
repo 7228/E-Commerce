@@ -9,6 +9,7 @@
     margin-top: 0;
     list-style-type: none;
     padding: 0;
+    width: 100%;
 }
 
 .navbar-items li {
@@ -54,4 +55,34 @@ hr {
     width: 30px;
     height: 30px;
     border-radius: 50%;
+}
+
+@media screen and (max-width: 640px) {
+    #login {
+        margin-left: 10px;
+    }
+    .shopping-cart {
+        margin-right: 15px;
+    }
+    .cart-amount {
+        background: red;
+        width: 20px;
+        height: 20px;
+        margin-left: -23px;
+        border-radius: 50%;
+    }
+    .shop-logo {
+        height: 0;
+        width: 0;
+        display: none;
+    }
+
+    .navbar-items {
+        overflow-x: scroll;
+        column-gap: 20px;
+    }
+    .navbar-items li{
+        font-size: 17px;
+        font-weight: 500;
+    }
 }

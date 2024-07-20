@@ -49,8 +49,8 @@
 }
 
 .main-img {
-    height: 600px;
-    width: 500px;
+    height: 66vh;
+    width: 25vw;
 }
 
 .side-img {
@@ -100,4 +100,42 @@
     color: white;
     font-size: 18px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 640px) {
+    .item-detail {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    .display-left {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    .more-images {
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+    }
+    .main-img {
+        width: 55vw;
+        height: 40vh;
+    }
+    .add-to-cart {
+        margin: auto;
+        margin-top: 30px;
+    }
+    .size-btns {
+        margin: auto;
+    }
+    .size-btn {
+        height: 40px;
+        width: 40px;
+    }
+    .size-btn-selected {
+        height: 40px;
+        width: 40px;
+    }
 }

@@ -10,3 +10,11 @@
     height: 350px;
     margin-top: 40px;
 }
+
+@media screen and (max-width: 640px) {
+    .category-products {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

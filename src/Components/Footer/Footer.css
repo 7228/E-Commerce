@@ -43,3 +43,15 @@
 .footer h2 {
     font-weight: 400;
 }
+
+@media screen and (max-width: 640px) {
+    .info {
+        gap:20px;
+        justify-content: center;
+        margin-right:15px;
+    }
+
+    .info li {
+        font-size: 17px;
+    }
+}

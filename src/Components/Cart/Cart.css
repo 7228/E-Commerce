@@ -83,3 +83,35 @@
     border: none;
     cursor: pointer;
 }
+
+@media screen and (max-width: 640px) {
+    .cart {
+        overflow-x: scroll;
+    }
+    .product p {
+        margin-left: -30px;
+    }
+    .cart-item {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr 1fr 1fr;
+        gap: 0;
+        justify-content: center;
+    }
+    .cart-item-container {
+        display: flex;
+        column-gap: 100px;
+    }
+
+    .remove-icon {
+        margin-left: 30px;
+    }
+
+    .cart-item-container hr {
+        display: none;
+    }
+
+    .order-details {
+        column-gap: 30px;
+    }
+
+}

@@ -9,7 +9,8 @@ export const Cart = () => {
   
   return (
     <div className='cart'>
-      <div className="cart-item">
+      <div className="cart-item-container">
+        <div className="cart-item">
         <p>Product</p>
         <p>Name</p>
         <p>Size</p>
@@ -27,10 +28,11 @@ export const Cart = () => {
               <p>{item.product.price}$</p>
               <img src={remove_icon} alt="" className='remove-icon' onClick={() => removeFromCart(item.product.id)}/>
             </div>
-            <hr />
+            <hr className='cart-item-hr'/>
           </div>
         ) 
       }) : <></>}
+      </div>
       <div className="order">
         <p className='summary'>Order Summary</p>
           <div className="order-details">

@@ -1,6 +1,6 @@
 .banner {
     width: 100%;
-    height: 700px;
+    height: 70vh;
     background: linear-gradient(180deg, #87cefa, #ffffff);
     margin-top:-22px;
     display: flex;
@@ -20,6 +20,7 @@
     height: 600px;
     width: 900px;
     margin-right: -300px;
+    max-width: 80%;
 }
 
 .banner-btn {
@@ -30,4 +31,14 @@
     color: white;
     font-weight: 700;
     cursor: pointer;
+}
+
+@media screen and (max-width: 640px) {
+    .banner {
+        display: flex;
+        flex-direction: column;
+    }
+    .banner-description {
+        font-size: 1em;
+    }
 }

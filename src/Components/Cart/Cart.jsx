@@ -42,7 +42,7 @@ export const Cart = () => {
           <hr />
           <div className='order-details'>
             <p>Estimated Shipping</p>
-            <p className='product-price'>0$</p>
+            <p>0$</p>
           </div>
           <hr />
           <div className="order-details total">
